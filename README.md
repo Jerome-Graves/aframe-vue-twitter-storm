@@ -3,6 +3,8 @@
 A 3D storm of spinning Twitter logos, rendered in the browser with
 [A-Frame](https://aframe.io/) (WebVR/WebGL) and Vue.js.
 
+**Live demo:** <https://jeromegraves.com/aframe-vue-twitter-storm/>
+
 ![A 3D storm of Twitter logos](twitter-storm.gif)
 
 ## Run
