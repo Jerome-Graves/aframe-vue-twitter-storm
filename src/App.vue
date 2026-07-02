@@ -35,8 +35,8 @@
 </template>
 
 <script>
-import Boid from "./components/Boid";
-import aframe from "aframe";
+import Boid from "./components/Boid.vue";
+import "aframe";
 
 export default {
   name: "App",

@@ -9,11 +9,12 @@ A 3D storm of spinning Twitter logos, rendered in the browser with
 
 ```bash
 npm install
-npm run serve     # dev server with hot reload
+npm run dev       # Vite dev server (hot reload)
 npm run build     # production build to dist/
+npm run preview   # preview the production build
 ```
 
-Stack: Vue 2 + A-Frame 1.2.
+Stack: Vue 3 + A-Frame, built with Vite.
 
 ## Credits
 

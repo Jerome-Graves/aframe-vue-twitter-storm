@@ -14,7 +14,7 @@ export default {
     return {
       objBoid: {},
       boidSpeed: 0.5,
-      position: new THREE.Vector3(),
+      position: new window.THREE.Vector3(),
     };
   },
   props: {
