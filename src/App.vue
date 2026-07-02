@@ -1,34 +1,23 @@
 <template>
   <div id="app">
-    <!--
-  -->
-
     <a-scene
-      renderer="antialias: false;
-                   colorManagement: true;
-                   sortObjects: true;
-                   physicallyCorrectLights: false;
-                   maxCanvasWidth: 1024;
-                   maxCanvasHeight: 1024;"
+      renderer="antialias: true;
+                colorManagement: true;
+                sortObjects: true;"
     >
-      <Boid
-        v-for="Boid in boidData"
-        :bData="Boid"
-        :key="Boid.index"
-        :id="Boid.index"
-      />
-      <a-camera position="0 0 50" fov="40" near="1"></a-camera>
+      <Boid v-for="b in boidData" :key="b.index" :b-data="b" />
+
+      <a-camera position="0 0 34" fov="55" near="1" wasd-controls-enabled="false"></a-camera>
+
       <a-sky
-        position="0 0 0"
         color="#14171A"
-        animation__color="property: components.material.material.color;  
-        type: color;
-      to: #F5F8FA;
-      dur: 10000;
-      dir: alternate;
-      loop: true;
-      elasticity: 1000;
-      "
+        animation__color="property: components.material.material.color;
+                          type: color;
+                          to: #1DA1F2;
+                          dur: 10000;
+                          dir: alternate;
+                          loop: true;
+                          elasticity: 1000;"
       ></a-sky>
     </a-scene>
   </div>
@@ -40,27 +29,23 @@ import "aframe";
 
 export default {
   name: "App",
+  components: { Boid },
   data() {
     return {
-      totalBoids: 15,
-      maxSize: 20,
+      totalBoids: 40,
+      spawn: 16, // birds start within +/- spawn/2 of the origin
       boidData: [],
     };
   },
-  components: {
-    Boid,
-  },
   methods: {
     createBoids() {
-      for (let i = 0; i < this.totalBoids - 1; i++) {
+      const s = this.spawn;
+      for (let i = 0; i < this.totalBoids; i++) {
         this.boidData.push({
           index: "boid" + i,
-          px: -this.maxSize / 2 + Math.floor(Math.random() * this.maxSize),
-          py: -this.maxSize / 2 + Math.floor(Math.random() * this.maxSize),
-          pz: -this.maxSize / 4 - Math.floor(Math.random() * this.maxSize),
-          rx: Math.floor(Math.random() * 360),
-          ry: Math.floor(Math.random() * 360),
-          rz: Math.floor(Math.random() * 360),
+          px: -s / 2 + Math.random() * s,
+          py: -s / 2 + Math.random() * s,
+          pz: -s / 2 + Math.random() * s,
         });
       }
     },
@@ -72,12 +57,5 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+html, body { margin: 0; height: 100%; overflow: hidden; }
 </style>
