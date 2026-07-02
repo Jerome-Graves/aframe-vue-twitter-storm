@@ -1,18 +1,24 @@
-# aframe-vue-example
+# aframe-vue-twitter-storm
 
-Created with CodeSandbox
-Simple a-frame and vue.js example.
+A 3D storm of spinning Twitter logos, rendered in the browser with
+[A-Frame](https://aframe.io/) (WebVR/WebGL) and Vue.js.
 
-## Twitter Storm!!!
+![A 3D storm of Twitter logos](twitter-storm.gif)
 
-Assets from:
-<br>
-<https://sketchfab.com/3d-models/twitter-logo-60aedf8d974d481995e196225fb0bd2e>.
-<br>
-Feel free to uses as you like.
+## Run
 
-# Author
+```bash
+npm install
+npm run serve     # dev server with hot reload
+npm run build     # production build to dist/
+```
 
-Jerome graves
-<br>
-<https://jeromegraves.com>
+Stack: Vue 2 + A-Frame 1.2.
+
+## Credits
+
+3D model: <https://sketchfab.com/3d-models/twitter-logo-60aedf8d974d481995e196225fb0bd2e>. Free to reuse.
+
+## License
+
+MIT — see [`LICENSE`](LICENSE).
