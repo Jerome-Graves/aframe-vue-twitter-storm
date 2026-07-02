@@ -2,8 +2,8 @@
   <a-entity
     :position="bData.px + ' ' + bData.py + ' ' + bData.pz"
     :rotation="bData.rx + ' ' + bData.ry + ' ' + bData.rz"
-    scale="0.02 0.02 0.02"
-    gltf-model="https://jeromegraves.com/assets/out.glb"
+    scale="1.5 1.5 1.5"
+    gltf-model="bird.glb"
   ></a-entity>
 </template>
 

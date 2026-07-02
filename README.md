@@ -20,7 +20,7 @@ Stack: Vue 3 + A-Frame, built with Vite.
 
 ## Credits
 
-3D model: <https://sketchfab.com/3d-models/twitter-logo-60aedf8d974d481995e196225fb0bd2e>. Free to reuse.
+The low-poly blue bird (`public/bird.glb`) is bundled with the repo, so the demo has no external asset dependencies.
 
 ## License
 
